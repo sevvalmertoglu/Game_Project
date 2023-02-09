@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, SafeAreaView, Button, TouchableOpacity ,KeyboardAvoidingView,ScrollView, } from "react-native";
-
-import Input from "./Input";
-import MyButton from "./MyButton";
-
+import Input from "../Input";
+import MyButton from "../MyButton";
 
   const LoginForm = ({navigation}) => {
     return (
@@ -13,7 +11,7 @@ import MyButton from "./MyButton";
         <SafeAreaView style={styles.safeArea}>
         
         <View style ={styles.headBackground} />
-        <Text style ={styles.signInText}>Sign In</Text>
+        
              
         <KeyboardAvoidingView behavior='position'>
         <View style={styles.titleContainer}>
@@ -22,40 +20,32 @@ import MyButton from "./MyButton";
         </View>
         <ScrollView>
         <View style = {styles.loginArea}>
+        <Text style ={styles.signInText}>Sign In</Text>
         <Text style = {styles.loginAreaTitle}>Please enter your username and password to login.</Text>
         <Input 
                 next={"next"}
                 bigLetter="none"
                 Text="Username"
               />
-
               <Input 
               bigLetter="none"
               control={true}
               Text="Password"
               />
-
-
-              
               <MyButton
               bgColor={"#ff1493"}
               text="SIGN IN NOW"
-              
               />
+              
 
         </View>
         </ScrollView>
         <View style={styles.signUpArea}>
         <Text style={styles.signUpDescription}>Don't have an account?</Text>
         <Button onPress={() => navigation.navigate('signup')}  title="Sign up" />
-        
         </View>
         </KeyboardAvoidingView>
         </SafeAreaView>
-           
-           
-
-           
       </View>
     );
     }  
@@ -67,6 +57,7 @@ const styles = StyleSheet.create(
         backgroundColor: 'pink'
       },
         signInText:{
+            paddingTop:10,
             marginHorizontal: 120,
             marginVertical: 15,
             fontSize: 20,
@@ -94,7 +85,6 @@ const styles = StyleSheet.create(
             fontSize: 30,
             color: '#f2f2f2'
           },
-
         loginArea: {
             marginHorizontal: 40,
             marginVertical: 40, 
@@ -110,10 +100,15 @@ const styles = StyleSheet.create(
             },
             elevation: 4,
         },
+        signUpDescription: {
+          marginHorizontal: 110,
+          fontSize: 15,
+          color: `#a9a9a9`
+        },
         loginAreaTitle: {
             fontSize: 15,
             paddingHorizontal: 50,
-            paddingTop:30,
+            paddingTop:10,
             textAlign: 'center',
           },
 
