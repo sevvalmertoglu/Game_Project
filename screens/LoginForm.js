@@ -22,7 +22,7 @@ import MyButton from "../MyButton";
         <View style = {styles.loginArea}>
         <Text style ={styles.signInText}>Sign In</Text>
         <Text style = {styles.loginAreaTitle}>Please enter your username and password to login.</Text>
-        <Input 
+              <Input 
                 next={"next"}
                 bigLetter="none"
                 Text="Username"
@@ -35,6 +35,7 @@ import MyButton from "../MyButton";
               <MyButton
               bgColor={"#ff1493"}
               text="SIGN IN NOW"
+              myOnPress={() => navigation.navigate('gamescreen')}
               />
               
 

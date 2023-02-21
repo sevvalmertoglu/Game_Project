@@ -2,30 +2,26 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class MyButton extends Component {
+export default class GameScreenButton extends Component {
   render() {
     return (
       <TouchableOpacity 
       onPress={this.props.myOnPress}
-      style={[styles.button, {backgroundColor: this.props.bgColor}]}>
-        <Text>{this.props.text}</Text>
+      style={[styles.GameScreenButton,]}>
+        <Text>Get Started</Text>
       </TouchableOpacity>
     )
   }
 }
 
-MyButton.PropTypes = {
+GameScreenButton.PropTypes = {
     text: PropTypes.string
+  
 }
 
 const styles = StyleSheet.create({
-    button: {
-        display: 'flex',
-        marginHorizontal: 80,
-        marginVertical: 20,
-        paddingVertical: 15,
-        borderRadius: 20,
+    GameScreenButton: {
+        marginVertical: 200,
         alignItems:'center'
-
     }
 });
