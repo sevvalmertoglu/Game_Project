@@ -6,9 +6,9 @@ export default class GameScreenButton extends Component {
   render() {
     return (
       <TouchableOpacity 
-      onPress={this.props.myOnPress}
-      style={[styles.GameScreenButton,]}>
-        <Text>Get Started</Text>
+      onPress={this.props.gameonPress}
+      style={[styles.GameScreenButton]}>
+        <Text>{this.props.text}</Text>
       </TouchableOpacity>
     )
   }
@@ -21,7 +21,16 @@ GameScreenButton.PropTypes = {
 
 const styles = StyleSheet.create({
     GameScreenButton: {
-        marginVertical: 200,
-        alignItems:'center'
+        display: 'flex',
+        marginVertical: 20,
+        alignItems: 'center',
+        backgroundColor:'pink',
+        fontSize:20,
+        width:100,
+        height:100,
+        borderRadius: 50,
+        marginLeft:150,
+
+        
     }
 });
